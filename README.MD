@@ -2,8 +2,9 @@
 PROJECT 1
 /********************************************************************/
 
-Proposal and Description: Make a two player game known as Onitama. Onitama is a board game with pawns whose movements on a board are dictated by information contained on cards in the player's hand. Each player has five pawns, one of which the victory condition hinges, and at all times has a hand of two cards, played face up. In game play, there are five cards available to play drawn out of a 16 card deck, with a player's turn resulting in their discarding the used card and picking up the spare card off to the side (ie: the spare card is, after the first player's first turn, the discard of whoever played the previous turn. Each player has two cards, with two players, that's four cards total in play). One movement, based on card information, is allowed per turn before turn passes to the other player. There are two victory conditions; the special pawn moves to a specific location on the board, or, in the way of checkers/chess, the loss of your special pawn or loss of your opponents results in a victory condition. Board is 5 x 5 squares with pawns starting at opposite ends of the opponent in a line. 
+Proposal and Description: Make a two player game known as Onitama. Onitama is a board game with pawns whose movements on a board are dictated by information contained on cards in the player's hand. Each player has five pawns, one on which the victory condition hinges, and at all times has a hand of two cards, played face up. In game play, there are five cards available to play drawn out of a 16 card deck, with a player's turn resulting in their discarding the used card after action and picking up the spare card off to the side (ie: the spare card is, after the first player's first turn, the discard of whoever played the previous turn. Each player has two cards, with two players, that's four cards total in play). One movement, based on card information, is allowed per turn before turn passes to the other player. There are two victory conditions; the special pawn moves to a specific location on the board, or, in the way of checkers/chess, the loss of your special pawn or loss of your opponents results in a victory condition. Board is 5 x 5 squares with pawns starting at opposite ends of the opponent in a line. 
 
+Jquery and Javascript (html/csss) ONLY
 
 
 /***********************LOAD GAME***********************************/
@@ -71,10 +72,12 @@ Red: Frog, Crab
 Blue: Cobra, Ox
 Side card: Goose.
 
-Blue position:
-1[1,1] 2[1,2] 3[1,3] 4[1,4] 5[1,5] 
+RED PLAYER TURN:
 
 Red position:
+1[1,1] 2[1,2] 3[1,3] 4[1,4] 5[1,5] 
+
+Blue position:
 1[5,5] 2[5,4] 3[5,3] 4[5,2] 5[5,1]
 
 Example movements:
@@ -85,20 +88,41 @@ Red: Frog, Crab
 Blue: Goose, Ox
 Side card: Cobra.
 
-Blue Pawn 1 at [5,5] using Frog. Frog allows for one right and one down, but that is off board. It allows for one up and one right, which is [4,4]. Or it allows for two left, but there is no available spot (different from off board). It moves to [4,4]. Card Frog is discarded and Cobra is picked up. 
-
-Blue position:
+Red position:
 1[2,2] 2[1,2] 3[1,3] 4[1,4] 5[1,5] 
 
-Red position:
-1[4,4] 2[5,4] 3[5,3] 4[5,2] 5[5,1]
+Blue position:
+1[5,5] 2[5,4] 3[5,3] 4[5,2] 5[5,1]
+
+BLUE PLAYER TURN:
+
+Blue Pawn 1 at [5,5] using Frog. Frog allows for one right and one down, but that is off board. It allows for one up and one right, which is [4,4]. Or it allows for two left, but there is no available spot (different from off board). It moves to [4,4]. Card Frog is discarded and Cobra is picked up. 
 
 Current cards:
 Red: Cobra, Crab
 Blue: Goose, Ox
 Side card: Frog
 
+Red position:
+1[2,2] 2[1,2] 3[1,3] 4[1,4] 5[1,5] 
 
+Blue position:
+1[4,4] 2[5,4] 3[5,3] 4[5,2] 5[5,1]
+
+RED PLAYER TURN:
+
+Red Pawn 1 at [4,4] using Crab. Crab allows for one up which is [3,2], two right which is [2,4], or two left which is off board. User picks two right at [2,4].
+
+Current cards:
+Red: Cobra, Frog
+Blue: Goose, Ox
+Side card: Crab
+
+Red position:
+1[2,4] 2[1,2] 3[1,3] 4[1,4] 5[1,5] 
+
+Blue position:
+1[4,4] 2[5,4] 3[5,3] 4[5,2] 5[5,1]
 
 NOTE: Pawns can JUMP other pawns, and the movement does not mean they take the pawn. Only if the pawn lands on a square where an enemy is can they take the pawn!
 Keep in mind: 
@@ -111,3 +135,15 @@ Add animation for when a pawn takes an enemy square.
 Add the option to go back to the rules page, but still be able to go back to the current game. 
 Add random hints and strategy before each turn. 
 Log rounds, and from the round, determine that the loser gets to go first in the next round. 
+
+/*************************AUTHOR**************************/
+Ashley Fueger
+
+
+
+/*************************Inspiration**************************/
+The game Onitama and the existential tragedy of having attempted to write my previous game in abstract instead of by modularly writing functions. NEVER AGAIN. 
+
+
+
+
